@@ -1,0 +1,7 @@
+#Method 2 : In this we used list comphrensions
+
+matrix=[[1,2,3],[4,5,6],[7,8,9]] 
+
+searchNumber    = 9
+
+[(index, row.index(val)) for index, row in enumerate(matrix) if  searchNumber <= row[-1] and searchNumber in row]
