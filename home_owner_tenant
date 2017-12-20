@@ -1,0 +1,21 @@
+Homely™ is startup aimed at allowing home owners to rent their places out to earn extra cash.  They will be operating in the US.  They need a data model and API for their business.
+
+The model will need to contain:
+Home owner accounts with the potential for multiple properties.
+A calendar to track property availabilty and rental.
+Renter accounts.
+Staff/admin accounts.
+
+The API should provide:
+CRUD for both types of user accounts.
+CRUD for home owner properties.
+Property availability management.
+Property reservation management.
+
+Create a rudimentary staff front-end to trigger the API calls.
+
+Reporting on this data will be a critical part of the business, so that should be considered in the design.
+
+This specification is intentionally vague.  Don’t get hung up on making sure the data model captures every last detail and possibility.  The goal is a workable model and business functionality.
+
+Once you are finished, commit your project to a Git repository and email us with the link for review. Be prepared to discuss your coding decisions.
