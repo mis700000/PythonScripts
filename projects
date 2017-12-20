@@ -1,0 +1,47 @@
+Project 1: – Python Web Scraping for Data Science
+
+In this project you will be introduced to the process of web scraping using Python. It  involves installation of Beautiful Soup, web scraping libraries, working on common data and page format on the web, learning the important kinds of objects, Navigable String, deploying the searching tree, navigation options, parser, search tree, searching by CSS class, list, function and keyword argument.
+
+Project 2 :-Create a password generator
+
+Objective – To generate a password using Python code which would be tough to guess
+
+Requirements :–
+
+To generate a password that is 8-12 characters long
+Password contains at least two special characters
+Password doesn’t start with a special character
+Project 3 :– Impact of pre-paid plans on the preferences of investors
+
+Domain – Finance
+
+Objective – The project aims to find the most impacting factors in preferences of pre-paid model, also identifies which are all the variables highly correlated with impacting factors
+
+Requirements :–
+
+To identify the various reasons for Pre-paid model preference and non-preference among the investors. And also understand the penetration of the Pre-paid model in the brokerage firms
+To identify the Pre-paid scheme advantages and disadvantages and also identify brand wise market share
+In addition to this, the project also looks to identify various insights that would help a newly established brand to foray deeper into the market on a large scale
+Project 4 :– Machine Learning – Prediction of stock prices
+
+Domain – Stock Market
+
+Objective – This project focuses on Machine Learning by creating predictive data model to predict future stock prices
+
+Requirements :–
+
+Quatitative Value Investing: Predict 6-month price movements based fundamental indicators from companies’ quarterly reports
+Forecasting: Build time series models on the delta between implied and actual volatility
+Predict 6-month price movements based fundamental indicators from companies’ quarterly reports
+Build time series models on the delta between implied and actual volatility?
+Project 5 : Server logs/Firewall logs
+
+Objective – This includes the process of loading the server logs into the cluster using Flume. It can then be refined using Pig Script, Ambari and HCatlog. You can then visualize it using elastic search and excel.
+
+This project task includes:
+
+Server logs
+Potential uses of server log data
+Pig script
+Firewall logs
+Work flow editor
