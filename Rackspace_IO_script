@@ -1,1 +1,24 @@
 
+#* gets transform into number 
+#. gets transform into the spaces
+#no.of spaces are always equal to (no.of dots +1)
+#* form the hirrachiel tree 
+#below is kind of pcedo code 
+output=[],formaxoutput=[]
+counter='0'#maps '*'
+while(inputLine) {#handle '*'cases
+                   if inputline[0]='*'{noofstarts=inputline.split(' ')[0].length
+                                       counterarray=counter.split('.')
+                                       while(counterarray.length<no.of stars) {counterarray.push('1');}
+                                       counterarray=counterarray[0:no.of stars]
+                                       counterarray[-1]=str(int(counterarray[-1])+1)
+                                       counter=counterarray.join('.'),
+                                       processedline=counter+inputline.split(' ')#push processed lin to output
+                                       output.push(processedline)
+                                       lastnoofspaces=0
+                                       lastdotslength=0
+                                       }
+ #handle '.' cases
+              else (inputline[0]='.'){dotlength=inputline.split(' ')[0].length
+                                      outputline=' '*(dotlength+1)+'-'=inputline.split(' )
+                                       
