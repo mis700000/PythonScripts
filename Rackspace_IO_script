@@ -1,24 +1,105 @@
-
+'''
 #* gets transform into number 
 #. gets transform into the spaces
 #no.of spaces are always equal to (no.of dots +1)
 #* form the hirrachiel tree 
 #below is kind of pcedo code 
-output=[],formaxoutput=[]
-counter='0'#maps '*'
-while(inputLine) {#handle '*'cases
-                   if inputline[0]='*'{noofstarts=inputline.split(' ')[0].length
-                                       counterarray=counter.split('.')
-                                       while(counterarray.length<no.of stars) {counterarray.push('1');}
-                                       counterarray=counterarray[0:no.of stars]
-                                       counterarray[-1]=str(int(counterarray[-1])+1)
-                                       counter=counterarray.join('.'),
-                                       processedline=counter+inputline.split(' ')#push processed lin to output
-                                       output.push(processedline)
-                                       lastnoofspaces=0
-                                       lastdotslength=0
-                                       }
+#output=[],formaxoutput=[]
+#counter='0'#maps '*'
+#while(inputLine) {#handle '*'cases
+#                   if inputline[0]='*'{noofstarts=inputline.split(' ')[0].length
+ #                                      counterarray=counter.split('.')
+ #                                      while(counterarray.length<no.of stars) {counterarray.push('1');}
+ #                                      counterarray=counterarray[0:no.of stars]
+ #                                      counterarray[-1]=str(int(counterarray[-1])+1)
+  #                                     counter=counterarray.join('.'),
+   #                                    processedline=counter+inputline.split(' ')#push processed lin to output
+   #                                    output.push(processedline)
+   #                                    lastnoofspaces=0
+    #                                   lastdotslength=0
+     #                                  }
  #handle '.' cases
-              else (inputline[0]='.'){dotlength=inputline.split(' ')[0].length
-                                      outputline=' '*(dotlength+1)+'-'=inputline.split(' )
-                                       
+      #        else (inputline[0]='.'){dotlength=inputline.split(' ')[0].length
+       #                               outputline=' '*(dotlength+1)+'-'=inputline.split(' )
+       
+ #Following is the actual python code 
+ import sys
+ift = sys.argv[1]
+
+
+#with open("input.txt", "r") as sample:
+with open(ift, "r") as sample:
+    k = open("outer1234", "w")
+    #k = open("output1.txt","w")
+    lines = sample.readlines()
+    count = 0
+    prc = 0
+    crc = 0
+    psd = 0
+    n = []
+    m = []
+    index = 1
+    rt = 3
+    for j in range(len(lines)):
+        s = lines[j].split()
+        if len(s) > 0 and s[0].startswith('.'):
+            m.append(s[0])
+    #     else:
+    #         m.append('0')
+    m.append('0')
+
+    for i in range(len(lines)):
+        a = lines[i].split()
+        # print(a)
+        if len(a) != 0:
+            if a[0].startswith('*'):
+                # print(a[0])
+                size_star = len(a[0])
+                crc = size_star
+                if crc == 1:
+                    count += 1
+                    n = [str(count)]
+                    a[0] = str(n[crc-1])
+                elif crc > prc:
+                    dif = crc - prc
+                    n.append("1")
+                    a[0] = ".".join(n)
+                    #n[dif] = str(int(n[dif]) + 1)
+                elif crc == prc:
+                    n[-1] = str(int(n[-1]) + 1)
+                    a[0] = ".".join(n)
+                elif prc > crc:
+                    for its in range(prc - crc):
+                         n.pop()
+                    n[-1] = str(int(n[-1]) + 1)
+                    a[0] = ".".join(n)
+
+                prc = crc
+
+            elif a[0].startswith('.'):
+                size_dots = len(a[0])
+
+                csd = size_dots
+                psd = len(m[index])
+                index += 1
+                #print(csd,psd)
+                if csd < psd:
+                    a[0] = (1+csd)*" " + '+'
+                else:
+                    a[0] = (1+csd)*" " + '-'
+            else:
+                a.insert(0, (rt*" "))
+            if a[0].startswith('.') or a[0].startswith('*'):
+                rt = len(a[0])
+            else:
+                rt = 3
+
+            #print(i + 1, len(m))
+           #print(a)
+            mon = " ".join(a)
+            k.write(mon)
+            k.write("\n")
+    #print(mon)
+            #print(mon)
+    k.close()
+
